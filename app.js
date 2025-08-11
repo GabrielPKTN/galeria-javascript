@@ -51,8 +51,15 @@ const imagens = [
 function criarImagem(srcImagem) {
     const galeria = document.getElementById('galeria')
     const imagem = document.createElement('img')
+    const label = document.createElement('div')
+    const texto = document.createElement('p')
+
     imagem.src = srcImagem.url
+    texto.textContent = srcImagem.nome
+
     galeria.appendChild(imagem)
+    galeria.appendChild(label)
+    label.appendChild(texto)
 
 }
 
